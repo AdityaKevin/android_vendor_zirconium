@@ -111,7 +111,42 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Filesystems tools
+# Omni Poor Man Themes
+PRODUCT_PACKAGES += \
+    DocumentsUITheme \
+    DialerTheme \
+    TelecommTheme
+
+PRODUCT_PACKAGES += \
+    NotificationsDark \
+    NotificationsLight \
+    NotificationsPrimary
+
+PRODUCT_PACKAGES += \
+    AccentSluttyPink \
+    AccentPixel \
+    AccentGoldenShower \
+    AccentDeepOrange \
+    AccentOmni \
+    AccentWhite \
+    AccentTeal \
+    AccentFromHell \
+    AccentBlueMonday \
+    AccentSmokingGreen \
+    AccentDeadRed \
+    AccentRottenOrange \
+    AccentDeepPurple
+
+PRODUCT_PACKAGES += \
+    PrimaryAlmostBlack \
+    PrimaryBlack \
+    PrimaryOmni \
+    PrimaryWhite \
+    PrimaryColdWhite \
+    PrimaryWarmWhite \
+    PrimaryDarkBlue
+
+# Extra tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
     fsck.ntfs \
@@ -153,3 +188,4 @@ include vendor/themes/config.mk
 PRODUCT_PACKAGES += \
   	messaging \
         Launcher3
+
