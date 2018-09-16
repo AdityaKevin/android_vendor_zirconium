@@ -106,6 +106,11 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 # leave less information available via JDWP.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
+# Fix Dialer
+PRODUCT_COPY_FILES +=  \
+    vendor/zirconium/prebuilt/common/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
+
 # Optional packages
 PRODUCT_PACKAGES += \
     LiveWallpapersPicker
@@ -114,7 +119,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# Omni Poor Man Themes
+# ZirconiumAosp Packages
+PRODUCT_PACKAGES += \
+    GContacts \
+    GDeskClock \
+    GDialer \
+    GMessaging
+
+# Exchange support
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
     DialerTheme \
@@ -158,6 +170,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mkfs.ntfs \
     mount.ntfs
+
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
