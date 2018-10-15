@@ -118,6 +118,7 @@ PRODUCT_PACKAGES += \
     TelecommTheme
 
 PRODUCT_PACKAGES += \
+    NotificationsBlack \
     NotificationsDark \
     NotificationsLight \
     NotificationsPrimary
@@ -182,10 +183,13 @@ include vendor/pixelstyle/config.mk
 # Themes
 include vendor/themes/config.mk
 
--include $(WORKSPACE)/build_env/image-auto-bits.mk
-
 #packages
 PRODUCT_PACKAGES += \
   	messaging \
         Launcher3
+
+# Branding
+include vendor/zirconium/config/branding.mk
+
+include vendor/zirconium/google/themes/Android.mk
 
