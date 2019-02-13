@@ -42,8 +42,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # Ambient Play
-PRODUCT_PACKAGES += \
-    AmbientPlayHistoryProvider
+#PRODUCT_PACKAGES += \
+#    AmbientPlayHistoryProvider
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -139,13 +139,7 @@ PRODUCT_BOOT_JARS += \
     org.pixelexperience.keydisabler
 
 # Branding
-include vendor/aosp/config/branding.mk
-
-# OTA
-include vendor/aosp/config/ota.mk
-
-# GApps
-include vendor/gapps/config.mk
+include vendor/zirconium/config/branding.mk
 
 # Pixel Style
 include vendor/pixelstyle/config.mk
