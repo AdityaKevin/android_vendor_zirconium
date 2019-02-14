@@ -148,3 +148,8 @@ include vendor/pixelstyle/config.mk
 include vendor/themes/config.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+#packages
+PRODUCT_PACKAGES += \
+  	messaging \
+        Launcher3
