@@ -185,8 +185,8 @@ include vendor/themes/config.mk
 
 #packages
 PRODUCT_PACKAGES += \
-  	messaging \
-        Launcher3
+    OmniStyle \
+    Launcher3
 
 # Branding
 include vendor/zirconium/config/branding.mk
