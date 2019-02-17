@@ -46,7 +46,7 @@ endif
 #    AmbientPlayHistoryProvider
 
 #accents
-$(call inherit-product, vendor/reloaded/themes/themes.mk)
+$(call inherit-product, vendor/zirconium/themes/themes.mk)
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
