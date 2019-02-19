@@ -19,4 +19,5 @@ CUSTOM_PROPERTIES := \
     org.zirconium.fingerprint=$(ROM_FINGERPRINT)
 
 #ZirconiumAosp System Version
+PRODUCT_PROPERTY_OVERRIDES += \
 ro.zirconium.version=$(ZIRCONIUM_VERSION)
