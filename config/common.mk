@@ -124,8 +124,8 @@ PRODUCT_PACKAGES += \
     GContacts \
     GDeskClock \
     GDialer \
-    GMessaging
-
+    GMessaging \
+    LatinIME
 # Exchange support
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
