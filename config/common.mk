@@ -204,11 +204,17 @@ include vendor/themes/config.mk
 
 #packages
 PRODUCT_PACKAGES += \
-    OmniStyle \
-    Launcher3
+    OmniStyle
 
 # Branding
 include vendor/zirconium/config/branding.mk
 
 include vendor/zirconium/google/themes/Android.mk
 
+
+# Lawnchair
+PRODUCT_PACKAGES += Lawnchair
+
+PRODUCT_COPY_FILES += \
+    vendor/zirconium/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/zirconium/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
