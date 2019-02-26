@@ -62,7 +62,11 @@ PRODUCT_COPY_FILES += \
     vendor/zirconium/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
-# Some permissions
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/zirconium/prebuilt/common/etc/permissions/privapp-permissions-zirconium.xml:system/etc/permissions/privapp-permissions-zirconium.xml
+
+# Power whitelist
 PRODUCT_COPY_FILES += \
     vendor/zirconium/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/zirconium/config/permissions/privapp-permissions-aosp.xml:system/etc/permissions/privapp-permissions-aosp.xml \
