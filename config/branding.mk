@@ -4,6 +4,17 @@ CUSTOM_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 ZIRCONIUM_VERSION := IGNITE
 TARGET_PRODUCT_SHORT := $(subst zirconium_,,$(CUSTOM_BUILD))
 
+#UNOFFICIAL
+ifndef CUSTOM_BUILD_TYPE
+    CUSTOM_BUILD_TYPE := Unofficial
+endif
+
+# Only include ZirconiumAosp OTA for official builds
+ifeq ($(filter-out OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
+    PRODUCT_PACKAGES += \
+        Updater
+endif
+
 ifeq ($(IS_GO_VERSION), true)
 CUSTOM_VERSION := Zirconium_go_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
 ROM_FINGERPRINT := Zirconium_go/$(CUSTOM_PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
@@ -20,4 +31,9 @@ CUSTOM_PROPERTIES := \
 
 #ZirconiumAosp System Version
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.zirconium.version=$(ZIRCONIUM_VERSION)
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
+    ro.zirconium.base.version=$(CUSTOM_BASE_VERSION) \
+    ro.zirconium.build.date=$(CUSTOM_DATE) \
+    ro.zirconium.build.version=$(CUSTOM_BUILD_VERSION) \
+    ro.zirconium.releasetype=$(CUSTOM_BUILD_TYPE) \
+    ro.zirconium.version=$(CUSTOM_VERSION)
