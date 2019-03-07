@@ -125,7 +125,10 @@ PRODUCT_PACKAGES += \
     GDeskClock \
     GDialer \
     GMessaging \
-    LatinIME
+    LatinIME \
+    MiXplorer \
+    CameraRoll
+
 # Exchange support
 PRODUCT_PACKAGES += \
     DocumentsUITheme \
