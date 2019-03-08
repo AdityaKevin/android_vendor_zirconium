@@ -3,3 +3,4 @@ add_lunch_combo zirconium_X00T-userdebug
 add_lunch_combo zirconium_whyred-userdebug
 add_lunch_combo zirconium_tulip-userdebug
 add_lunch_combo zirconium_lettuce-userdebug
+add_lunch_combo zirconium_mido-userdebug
