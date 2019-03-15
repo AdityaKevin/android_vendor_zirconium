@@ -225,3 +225,7 @@ PRODUCT_PACKAGES += Lawnchair
 PRODUCT_COPY_FILES += \
     vendor/zirconium/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/zirconium/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
+# init file
+PRODUCT_COPY_FILES += \
+    vendor/zirconium/prebuilt/common/etc/init.zirconium.rc:system/etc/init/init.zirconium.rc
